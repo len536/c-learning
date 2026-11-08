@@ -25,10 +25,9 @@ gcc -std=c11 -Wall -Wextra day17/day17_exercise.c -o test && ./test
 | 二级指针 | 指针数组、`int **` 与 `int *[]` 的等价性、多级解引用 | [`day14`](day14/day14_double_pointer.c) |
 | 字符串与指针 | `char s[]` vs `char *p` 的内存布局差异 | [`code/04`](code/04_string_pointer.c) [`code/05`](code/05_string_funcs.c) |
 | 手写字符串库函数 | 不调 `<string.h>` 实现 `strlen` / `strcpy` / `strcmp` / `strcat` | [`day17`](day17/day17_exercise.c) |
-| 字符串处理 | 原地逆序（双指针）、字符分类统计、数字与字符串互转 | [`day16`](day16/day16_exercise.c) [`day18`](day18/day18_exercise.c) [`code/08`](code/08_digits.c) [`code/09`](code/09_int_to_string.c) |
-| 结构体 | `typedef`、成员访问 `->`、结构体指针传参、嵌套定义 | [`day15`](day15/day15_exercise.c) [`day19`](day19/day19_exercise.c) |
-| 结构体数组 | 批量存储、遍历统计、数组传参退化为结构体指针 | [`day20`](day20/day20_exercise.c) |
-| 输入处理 | `scanf` 与 `fgets` 的区别、缓冲区残留换行的处理 | 散见各练习 |
+| 字符串处理 | 原地逆序（头尾双指针，不开第二块数组）、数字拆位、整数与字符串互转 | [`day16`](day16/day16_exercise.c) [`code/08`](code/08_digits.c) [`code/09`](code/09_int_to_string.c) |
+| 结构体 | `typedef`、成员访问 `->`、结构体指针传参 | [`day15`](day15/day15_exercise.c) |
+| 输入处理 | `scanf("%s")` 读不了空格的限制、`getchar()` 清理缓冲区残留换行 | 见 [`day17`](day17/day17_exercise.c) |
 
 ## 重点：手写标准库字符串函数
 
@@ -88,9 +87,6 @@ c-learning/
 ├── day15/      # 指针 + 结构体入门
 ├── day16/      # 字符串原地逆序
 ├── day17/      # 手写字符串库函数
-├── day18/      # 字符串综合：字符分类统计
-├── day19/      # 结构体定义与嵌套
-├── day20/      # 结构体数组
 └── notes/      # 每日手写笔记（Markdown）
 ```
 
@@ -114,10 +110,7 @@ c-learning/
 | 09-09 | 指针 + 结构体入门 | [`day15`](day15/day15_exercise.c) | [笔记](notes/2026-09-10-day15-结构体指针.md) |
 | 09-10 | 字符串原地逆序 | [`day16`](day16/day16_exercise.c) | [笔记](notes/2026-09-10-day16-字符串逆序.md) |
 | 09-11 | 手写字符串库函数 | [`day17`](day17/day17_exercise.c) | [笔记](notes/2026-09-11-day17-手写字符串库函数.md) |
-| 09-12 | 字符串综合：字符分类统计 | [`day18`](day18/day18_exercise.c) | [笔记](notes/2026-09-12-day18-字符串综合.md) |
-| 09-13 | 结构体定义与嵌套 | [`day19`](day19/day19_exercise.c) | [笔记](notes/2026-09-13-day19-结构体定义与嵌套.md) |
-| 09-14 | 结构体数组 | [`day20`](day20/day20_exercise.c) | [笔记](notes/2026-09-14-day20-结构体数组.md) |
 
 ---
 
-后续计划：动态内存管理（`malloc` / `free` / 内存泄漏排查）、文件操作、链表实现。
+后续计划：结构体嵌套与结构体数组、动态内存管理（`malloc` / `free` / 内存泄漏排查）、文件操作、链表实现。
