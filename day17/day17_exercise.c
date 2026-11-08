@@ -1,7 +1,8 @@
 /*
  * Day 17 · 手写字符串库函数 · ⭐⭐
- * 题目见推送正文，此为参考答案
  * 不调 <string.h>，手写 my_strlen / my_strcpy / my_strcmp / my_strcat
+ *
+ * 练习方式：先自己写一遍，再对照文末「关键点 / 易错点」复盘
  */
 #include <stdio.h>
 

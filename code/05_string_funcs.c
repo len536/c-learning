@@ -1,3 +1,5 @@
+/* MinGW 8.x 的 printf 默认不带 C99 的 %zu 修饰符，需要打开 ANSI stdio */
+#define __USE_MINGW_ANSI_STDIO 1
 #include <stdio.h>
 #include <string.h>
 
